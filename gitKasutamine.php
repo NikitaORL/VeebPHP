@@ -36,3 +36,21 @@ user.email=niita.orlenko234@gmail.com
 </pre>
 <?php
 echo "<li>GIT HUB projektiga sidumine";
+echo "<pre>";
+echo "C:\Users\opilane\Desktop\php1tund>git remote add origin git@github.com:NikitaORL/VeebPHP.git
+
+C:\Users\opilane\Desktop\php1tund>git branch -M main
+
+C:\Users\opilane\Desktop\php1tund>git push -u origin main";
+echo "</pre>";
+echo "</li>";
+
+
+echo "<li> Projekti kloonimine desktopi. <br>;
+* Kontrolli et id_rsa võtion olemas .ssh kaustas<br>
+* GIT CMD on lahti ja <br>";
+echo "<pre>";
+echo "git clone";
+echo "</ol>";
+echo "</li>";
+echo "</pre>";
