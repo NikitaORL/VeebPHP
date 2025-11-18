@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <title>Nikita Orlenko PHP tööd</title>
     <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/MinuRuhmStyle.css">
+
+    <script src="JavaScript/Kalkulaator.js"></script>
+    <script src="JavaScript/MinuRuhmJS.js"></script>
+    <script src="JavaScript/dateScript.js"></script>
+
+
 </head>
 <body>
 <?php
@@ -14,15 +21,42 @@ include('header.php');
 
 <?php
 //nav menu
-include('index.php');
+include('nav.php');
 ?>
-<main>
-    <section>
+<div class="flex-container">
 
-    </section>
-</main>
+
+    <div>
+        <?php
+        if (isset($_GET["link"])) {
+            include('content/' . $_GET["link"]);
+        } else {
+            include('content/avaleht.php');
+        }
+        ?>
+    </div>
+
+
+    <div>
+        <img src="Image/bmw.webp" alt="Esimine posi auto">
+
+
+        <div>
+            <button id="aeg" onclick="kuupaevKellaaeg()">TÄNA</button>
+            <button id="sunnipaev" onclick="näitaSünnipäeva()">Minu sünnipäevani</button>
+        </div>
+
+
+        <div id="dateOnly"></div>
+        <div id="timeOnly"></div>
+        <div id="dateTime"></div>
+        <div id="sunniTulemus"></div>
+
+    </div>
+
+</div>
 <?php
-//nav menu
+//footer
 include('footer.php');
 ?>
 
