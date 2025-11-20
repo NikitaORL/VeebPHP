@@ -97,3 +97,13 @@ h2 {
     }
 }
 
+
+/* TEXT FUNKTSIOONID !!!!!!!!!!!!!!!! STYLE CSS!!!!!!!!!!!!!!!!!!!!!!!*/
+.grid-container2 div {
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #555555;
+    margin-bottom: 10px; /* пространство между блоками */
+    background-color: #f9f9f9;
+}
+
