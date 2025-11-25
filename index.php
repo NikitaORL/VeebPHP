@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Nikita Orlenko PHP tööd</title>
     <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/NavStyle.css">
     <link rel="stylesheet" href="Style/MinuRuhmStyle.css">
-
     <script src="JavaScript/Kalkulaator.js"></script>
     <script src="JavaScript/MinuRuhmJS.js"></script>
     <script src="JavaScript/dateScript.js"></script>

@@ -1,4 +1,16 @@
 <?php
+
+function clearVarsExcept($url, $varname){
+    $url = basename($url);
+    if (str_starts_with($url, '?')) {
+        return "?$varname=".$_REQUEST[$varname];
+    }
+    return strtok($url, "?")."?$varname=".$_REQUEST[$varname];
+}
+?>
+
+
+<?php
 echo "<h2>Matemaatilised tehted</h2>";
 $arv1 = 1;
 $arv2 = 2;
@@ -83,23 +95,15 @@ echo "<h3>Viie vihje</h3>";
 echo "Kui me esimesest tšillist teise lahutame, saame: ";
 echo ($EsimineArv - $TeineArv);
 echo "<br>";
+echo "<h3>Sinu vastused:</h3>";
 ?>
 
 
     <form name="Arv1Kontroll" action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">
         <label for="linn">Sisesta esimine arv:</label>
-        <input type="text" id="arv1" name="arv1">
+        <input type="number" id="arv1" name="arv1" min="0" max="100">
         <input type="submit" value="Kontrolli">
     </form>
-
-    <form name="Arv2Kontroll" action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">
-        <label for="linn">Sisesta teine arv:</label>
-        <input type="text" id="arv2" name="arv2">
-        <input type="submit" value="Kontrolli">
-    </form>
-
-
-
 
 <?php
 if (isset($_REQUEST["arv1"])) {
@@ -113,7 +117,17 @@ if (isset($_REQUEST["arv1"])) {
         echo "Sinu vastus " . $_REQUEST["arv1"] . " on vale!";
     }
 }
+?>
 
+
+    <form name="Arv2Kontroll" action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">
+        <label for="linn">Sisesta teine arv:</label>
+        <input type="number" id="arv2" name="arv2" min="0" max="100">
+        <input type="submit" value="Kontrolli">
+    </form>
+
+
+<?php
 if (isset($_REQUEST["arv2"])) {
     if (strtolower($_REQUEST["arv2"]) == "33") {
         echo "Sinu vastus " . $_REQUEST["arv2"] . " on õige!";
