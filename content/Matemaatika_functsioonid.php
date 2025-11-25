@@ -54,3 +54,76 @@ $format = "Tere %s %s , teie arv on x: %d";
 printf($format, $perenimi,  $nimi,  $x);
 
 echo "<br>";
+echo "<h2>Otsime kaks arvad 1-100</h2>";
+$EsimineArv = "77";
+$TeineArv = "33";
+$SummaArv = ($EsimineArv + $TeineArv);
+
+echo "<h3>Esimine vihje</h3>";
+echo "Ruutjuur arvad on: ";
+echo sqrt($EsimineArv+$TeineArv);
+echo "<br>";
+
+echo "<h3>Teine vihje</h3>";
+echo "Astendamine summa 3 on: ";
+echo pow($SummaArv, 3);
+echo "<br>";
+
+echo "<h3>Kolmas vihje</h3>";
+echo " Summa korrutamine tulemus on: ";
+echo ($EsimineArv * $TeineArv);
+echo "<br>";
+
+echo "<h3>Neljas vihje</h3>";
+echo " Esimese arvu numbrite arv on kaks. Ja kui esimene arv jagada teisega, siis saadakse: ";
+echo ($EsimineArv / $TeineArv);
+echo "<br>";
+
+echo "<h3>Viie vihje</h3>";
+echo "Kui me esimesest tšillist teise lahutame, saame: ";
+echo ($EsimineArv - $TeineArv);
+echo "<br>";
+?>
+
+
+    <form name="Arv1Kontroll" action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">
+        <label for="linn">Sisesta esimine arv:</label>
+        <input type="text" id="arv1" name="arv1">
+        <input type="submit" value="Kontrolli">
+    </form>
+
+    <form name="Arv2Kontroll" action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">
+        <label for="linn">Sisesta teine arv:</label>
+        <input type="text" id="arv2" name="arv2">
+        <input type="submit" value="Kontrolli">
+    </form>
+
+
+
+
+<?php
+if (isset($_REQUEST["arv1"])) {
+    if (strtolower($_REQUEST["arv1"]) == "77") {
+        echo "Sinu vastus " . $_REQUEST["arv1"] . " on õige!";
+    } else if ($_REQUEST["arv1"] < "77") {
+    echo "Suurem!";
+    } else if ($_REQUEST["arv1"] > "77") {
+        echo "Väiksem!";
+    } else {
+        echo "Sinu vastus " . $_REQUEST["arv1"] . " on vale!";
+    }
+}
+
+if (isset($_REQUEST["arv2"])) {
+    if (strtolower($_REQUEST["arv2"]) == "33") {
+        echo "Sinu vastus " . $_REQUEST["arv2"] . " on õige!";
+    } else if ($_REQUEST["arv2"] < "33") {
+        echo "Suurem!";
+    } else if ($_REQUEST["arv2"] > "33") {
+        echo "Väiksem!";
+    } else {
+        echo "Sinu vastus " . $_REQUEST["arv2"] . " on vale!";
+    }
+}
+
+?>
