@@ -1,0 +1,68 @@
+body {
+    background-color: #e8f0f8;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.student {
+    width: 150px;
+    background-color: lightgray;
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.student a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.student:hover {
+    border: 2px solid #81c3f3;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+body {
+    background-color: #e8f0f8;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.student {
+    width: 150px;
+    background-color: lightgray;
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.student a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.student:hover {
+    border: 2px solid #81c3f3;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
