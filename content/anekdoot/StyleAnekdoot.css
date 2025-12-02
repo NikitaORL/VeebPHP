@@ -1,0 +1,66 @@
+
+
+.headerMobiliToo {
+    display: flex;              /* Располагаем ссылки в одну строку */
+    justify-content: center;    /* Выравниваем по центру */
+    gap: 10px;                  /* Расстояние между ссылками */
+    padding: 10px;
+    background-color: lightgrey;  /* Светлый фон для блока */
+    border-radius: 6px;
+}
+
+/* Для каждой ссылки отдельная рамка */
+.headerMobiliToo a {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 2px solid #333;   /* Рамка вокруг каждой ссылки */
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Плавная анимация при наведении */
+}
+
+/* Эффект при наведении */
+.headerMobiliToo a:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+#h1Mobil{
+    text-align: center;
+}
+
+.MessageTxt{
+    text-align: center;
+}
+
+.AutorTxt{
+    text-align: center;
+}
+
+.footerMobiliToo{
+    text-align: center;
+    background-color: lightgrey;  /* Светлый фон для блока */
+}
+
+.anek1{
+    text-align: center;
+}
+.anek2{
+    text-align: center;
+}
+.anek3{
+    text-align: center;
+}
+
+#h2Anek1{
+    text-align: center;
+}
+#h2Anek2{
+    text-align: center;
+}
+#h2Anek3{
+    text-align: center;
+}
